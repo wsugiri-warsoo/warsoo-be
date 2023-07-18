@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => res.send('-- landing --'));
-router.get('/about', (req, res) => res.send('-- about --'));
-router.get('/login', (req, res) => res.send('-- login --'));
+router.get('/', (req, res) => res.render('home', { title: '-- Landing Page --', message: 'Landing Page' }));
+router.get('/about', (req, res) => res.render('about', { title: '-- About Page --', message: 'Hi, you area on about page' }));
+router.get('/login', (req, res) => res.render('login', { title: '-- Login Page --', message: 'Login Page' }));
 
 module.exports = router;
